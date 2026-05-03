@@ -1,0 +1,17 @@
+
+> pulse-coffee-house@1.0.0 dev
+> next dev --port 3000
+
+   ▲ Next.js 15.5.15
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.32:3000
+
+ ✓ Starting...
+ ✓ Ready in 1623ms
+ ○ Compiling / ...
+ ✓ Compiled / in 1257ms (1536 modules)
+ GET / 200 in 4947ms
+ ○ Compiling /menu ...
+ ✓ Compiled /menu in 848ms (1599 modules)
+ GET /menu 200 in 1289ms
+ GET / 200 in 84ms
