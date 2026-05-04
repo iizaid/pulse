@@ -40,6 +40,26 @@ export function Navbar() {
     return () => observer.disconnect();
   }, []);
 
+  // Track navbar height and expose it as a CSS variable so Hero can pad correctly
+  const headerRef = useRef<HTMLElement | null>(null);
+  useEffect(() => {
+    const header = headerRef.current;
+    if (!header) return;
+    const ro = new ResizeObserver(() => {
+      document.documentElement.style.setProperty(
+        "--navbar-h",
+        `${header.offsetHeight}px`
+      );
+    });
+    ro.observe(header);
+    // Set initial value immediately
+    document.documentElement.style.setProperty(
+      "--navbar-h",
+      `${header.offsetHeight}px`
+    );
+    return () => ro.disconnect();
+  }, []);
+
   function handleNavClick(event: MouseEvent<HTMLAnchorElement>, href: string) {
     if (!href.startsWith("#")) return;
 
@@ -55,7 +75,7 @@ export function Navbar() {
   }
 
   return (
-    <header className="fixed left-0 right-0 top-0 z-[999] border-b border-pulse-copper/10 bg-[#f7efe6] shadow-[0_10px_30px_rgba(8,35,61,0.06)]">
+    <header ref={headerRef} className="fixed left-0 right-0 top-0 z-[999] border-b border-pulse-copper/10 bg-[#f7efe6] shadow-[0_10px_30px_rgba(8,35,61,0.06)]">
       <div className="mx-auto flex max-w-[1672px] items-center justify-between px-8 py-3 md:px-12 xl:px-[78px]">
         <a href="#home" aria-label="Pulse home" className="relative block h-[52px] w-[140px] md:h-[62px] md:w-[160px]">
           <Image
