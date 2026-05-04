@@ -48,7 +48,7 @@ export function Hero() {
   return (
     <section id="home" className="section-paper relative min-h-[100dvh] overflow-hidden lg:min-h-[941px]">
       <Navbar />
-      <div className="mx-auto grid min-h-[100dvh] max-w-[1672px] grid-cols-1 items-center px-6 pt-[160px] pb-[80px] md:px-14 lg:min-h-[941px] lg:grid-cols-[0.88fr_1.12fr] lg:px-[84px] lg:pt-[168px] lg:pb-0">
+      <div className="mx-auto grid min-h-[100dvh] max-w-[1672px] grid-cols-1 items-center px-5 pt-[140px] pb-[60px] text-center sm:text-left md:px-14 md:pt-[160px] lg:min-h-[941px] lg:grid-cols-[0.88fr_1.12fr] lg:px-[84px] lg:pt-[168px] lg:pb-0 lg:text-left">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
@@ -60,15 +60,17 @@ export function Hero() {
             <br />
             BY PULSE
           </h1>
-          <p className="mt-5 text-[14px] font-black uppercase tracking-[0.15em] sm:tracking-[0.2em] text-pulse-copper md:whitespace-nowrap md:text-[25px] md:tracking-[0.27em]">
+          <p className="mt-4 text-[12px] font-black uppercase tracking-[0.12em] text-pulse-copper sm:text-[14px] sm:tracking-[0.18em] md:text-[20px] md:tracking-[0.27em] lg:whitespace-nowrap">
             PREMIUM COFFEE • DESSERTS • HOOKAH
           </p>
-          <p className="body-copy mt-7 max-w-[470px]">
+          <p className="body-copy mt-5 max-w-[470px] mx-auto sm:mx-0 lg:mx-0">
             From our pulse to yours. Crafted for warm moments, bold flavor, and unforgettable experiences.
           </p>
-          <ArrowButton href="#menu" className="mt-8 w-[248px] justify-between px-7">
-            Explore Menu
-          </ArrowButton>
+          <div className="mt-7 flex justify-center sm:justify-start lg:justify-start">
+            <ArrowButton href="#menu" className="w-full max-w-[280px] justify-between px-7 sm:w-[248px]">
+              Explore Menu
+            </ArrowButton>
+          </div>
         </motion.div>
 
         <motion.div

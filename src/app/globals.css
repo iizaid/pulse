@@ -103,8 +103,8 @@ a {
 
 .headline {
   font-family: "Bebas Neue", "Arial Narrow", sans-serif;
-  font-size: clamp(88px, 12vw, 190px);
-  line-height: 0.89;
+  font-size: clamp(56px, 12vw, 190px);
+  line-height: 0.92;
   color: var(--navy);
   letter-spacing: 0;
   text-shadow: 0 2px 0 rgba(8, 35, 61, 0.04);
@@ -130,7 +130,7 @@ a {
   color: #09213c;
   font-family: "Cormorant Garamond", Georgia, serif;
   font-size: 22px;
-  line-height: 1.45;
+  line-height: 1.5;
 }
 
 .nav-link {
@@ -242,11 +242,12 @@ a {
 
 @media (max-width: 768px) {
   .headline {
-    font-size: clamp(48px, 15vw, 84px);
+    font-size: clamp(44px, 13vw, 84px);
+    line-height: 0.92;
   }
 
   .section-title {
-    font-size: clamp(42px, 12vw, 72px);
+    font-size: clamp(40px, 11vw, 72px);
   }
 
   .nav-link {
@@ -254,6 +255,36 @@ a {
   }
 
   .body-copy {
-    font-size: 17px;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .pulse-button {
+    min-height: 52px;
+    padding: 0 22px;
+    font-size: 16px;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .headline {
+    font-size: clamp(38px, 11.5vw, 60px);
+    line-height: 0.93;
+  }
+
+  .section-title {
+    font-size: clamp(34px, 10vw, 54px);
+  }
+
+  .body-copy {
+    font-size: 16px;
+  }
+
+  .pulse-button {
+    min-height: 48px;
+    padding: 0 18px;
+    font-size: 15px;
+    gap: 12px;
   }
 }
