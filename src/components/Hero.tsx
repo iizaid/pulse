@@ -48,7 +48,10 @@ export function Hero() {
   return (
     <section id="home" className="section-paper relative min-h-[100dvh] overflow-hidden lg:min-h-[941px]">
       <Navbar />
-      <div className="mx-auto grid min-h-[100dvh] max-w-[1672px] grid-cols-1 items-center px-6 pt-[160px] pb-[80px] md:px-14 lg:min-h-[941px] lg:grid-cols-[0.88fr_1.12fr] lg:px-[84px] lg:pt-[168px] lg:pb-0">
+      <div
+        className="mx-auto grid min-h-[100dvh] max-w-[1672px] grid-cols-1 items-center px-5 pb-[60px] text-center sm:text-left md:px-14 lg:min-h-[941px] lg:grid-cols-[0.88fr_1.12fr] lg:px-[84px] lg:pb-0 lg:text-left"
+        style={{ paddingTop: "calc(var(--navbar-h, 160px) + 32px)" }}
+      >
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
